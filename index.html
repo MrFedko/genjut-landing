@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#090b09">
+<meta name="description" content="Replace Everyone in the Video With You — Genjutsu workflow">
+<title>Replace Everyone in the Video With You</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="sun">☼</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Replace Everyone in the<br>Video With You</h1>
+      <p>One photo, one reference video. That's it.</p>
+
+      <div class="notice">
+        <p>Uses Higgsfield's new model, <strong>Genjutsu.</strong> Much more stable than before: it handles busier scenes and fails far less often.</p>
+      </div>
+      <a class="btn" href="https://higgsfield.ai/" target="_blank" rel="noopener">Open Higgsfield →</a>
+    </section>
+
+    <section>
+      <div class="label">REFERENCE VIDEO </div>
+      <div class="card download-card">
+        <div class="accent"></div>
+        <h2>Download the reference video first</h2>
+        <p>This is the clip from my video. Use it as-is, or swap in your own.</p>
+        <button class="download-btn" id="downloadRef">Download the reference video ↓</button>
+      </div>
+    </section>
+
+<section>
+  <div class="label">THREE STEPS <span>三个步骤</span></div>
+
+  <div class="step-card">
+
+    <div class="step">
+      <span class="num">01</span>
+      <div>
+        <h3>Prepare two photos</h3>
+        <p><b>image_1</b> : who the main character in the scene is (your photo)</p>
+        <p><b>image_2</b> : who everyone around them becomes</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="num">02</span>
+      <div>
+        <h3>Upload the reference video</h3>
+        <p>The one you downloaded above, or your own.</p>
+        <p>It needs a group of people with one main character in the center.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="num">03</span>
+      <div>
+        <h3>Paste the prompt, then wait</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section>
+      <div class="label">COPY THIS </div>
+      <div class="prompt-card">
+        <div class="prompt-head"><span>CHARACTER-SWAP-TXT</span><button id="copyBtn">Copy</button></div>
+        <pre id="prompt">CHARACTER REPLACEMENT TASK
+
+1. CENTER CHARACTER: Replace ONLY the single main character standing in the exact center of the group with the character from @[Image 1](image_1). The center position, body placement, scale, pose, movement, and screen position must remain consistent with the original video.
+
+2. SURROUNDING CHARACTERS: Replace EVERY OTHER PERSON surrounding the center character with the character from @[Image 2](image_2). This includes ALL visible people around the center character: front row, left and right sides, middle rows, and background. Do NOT leave any of the original surrounding people unchanged. Every surrounding person becomes the same @[Image 2](image_2) character, repeated as identical copies.
+
+3. IDENTITY LOCK: Keep each replacement character's face, hairstyle, skin tone, body proportions, outfit, and color palette exactly as shown in the reference images, in every single frame. No morphing, no identity drift, no blending between image_1 and image_2.
+
+4. MOTION AND TIMING: Preserve the original choreography frame by frame. Each replaced character follows the exact same body movement, limb motion, head turn, facing direction, walking speed, and timing as the original person they replace. Do not add, remove, or re-time any motion.
+
+5. CAMERA AND FRAMING: Keep the original camera angle, camera movement, focal length, depth of field, and shot duration unchanged. Do not re-frame, crop, zoom, or stabilize.
+
+6. ENVIRONMENT: Keep the background, set, props, floor, and all non-human elements 100% identical to the original video. Only the people are replaced.
+
+7. LIGHTING INTEGRATION: Match the original lighting direction, intensity, color temperature, shadows, and reflections onto the new characters. Contact shadows and ground contact must stay physically correct, so the characters look natively filmed in the scene, not pasted on.
+
+8. SCALE AND DEPTH: Respect the original perspective. Characters further from camera stay smaller, and the occlusion order stays the same. Nobody floats, overlaps incorrectly, or changes height relative to the original person.
+
+AVOID: extra people added, people removed, duplicated or missing limbs, warped faces, flickering identity, style change, cartoon or filter look, watermark, text overlay, background alteration, slow motion or speed ramp.
+
+OUTPUT: same resolution, same aspect ratio, same frame rate, same length as the source.</pre>
+      </div>
+      <div class="info-card">
+        <p><b>image_1 and image_2</b> in the prompt map automatically to the two photos you upload. No edits needed.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">A FEW THINGS TO KNOW <span>几个提醒</span></div>
+      <div class="card tips">
+        <ul>
+          <li><b>One free run, then it's paid.</b><br><span>有一次免费，之后要付费。</span></li>
+          <li><b>It takes a while. One run can be tens of minutes. Start it, then go do something else.</b><br></li>
+          <li><b>Genjutsu is far more stable than the old model and handles complex scenes, but it still fails sometimes.</b><br></li>
+          <li><b>Photos should be front-facing, sharp, and evenly lit. A clean background makes you easier to cut out.</b><br></li>
+        </ul>
+      </div>
+
+      <div class="card dark-tip">
+        <p><b>What matters most in this prompt is locking identity and motion.</b> Without those constraints, it will freely change faces and things on its own.</p>
+      </div>
+    </section>
+
+    <section class="save">
+      <div class="save-card">
+        <p>You just saved the cost of a full cast.</p>
+        <h2>There's more you can save</h2>
+        <p>I build landing pages, funnels and automations for US clients using the same logic. Pay AI once it actually pays off. I learned all of this at a free two-day online workshop.</p>
+        <a class="btn wide" href="#" id="moreBtn">See what it is →</a>
+        <small>This is an affiliate link. I earn a commission if you sign up through it.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>Higgsfield Genjutsu Character Swap ·<br>instagram.com/true_cacpitan</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
