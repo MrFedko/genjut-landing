@@ -17,16 +17,6 @@ copyBtn.addEventListener("click", async () => {
   }
 });
 
-document.getElementById("downloadRef").addEventListener("click", () => {
-  // Replace this with the real MP4 URL when you have the reference video.
-  const url = "assets/reference-video.mp4";
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "reference-video.mp4";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-});
 
 document.getElementById("moreBtn").addEventListener("click", e => {
   e.preventDefault();
